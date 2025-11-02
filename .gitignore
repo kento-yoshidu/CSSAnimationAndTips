@@ -1,6 +1,2 @@
+.next/
 node_modules/
-.cache/
-public
-src/gatsby-types.d.ts
-.node-version
-.env*
