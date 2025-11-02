@@ -1,36 +1,25 @@
 {
-  "name": "portfolio-site",
-  "version": "1.0.0",
+  "name": "dummy-data-frontend",
+  "version": "0.1.0",
   "private": true,
-  "description": "portfolio-site",
-  "author": "kento",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.1",
-    "dotenv": "^16.0.3",
-    "gatsby": "^5.2.0",
-    "gatsby-plugin-image": "^3.2.0",
-    "gatsby-plugin-sharp": "^5.2.0",
-    "gatsby-plugin-sitemap": "^6.2.0",
-    "gatsby-source-filesystem": "^5.2.0",
-    "gatsby-transformer-sharp": "^5.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.6"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "typescript": "^4.8.4"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.6",
+    "@eslint/eslintrc": "^3"
   }
 }
