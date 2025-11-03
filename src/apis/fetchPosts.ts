@@ -21,4 +21,4 @@ export async function fetchPosts(): Promise<Post[]> {
   }
 
   return await res.json();
-}
+};
