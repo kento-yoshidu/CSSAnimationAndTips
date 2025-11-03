@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { Label } from "@radix-ui/react-label";
 import styles from "./Input.module.css";
 
@@ -9,7 +8,7 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 };
 
 export function Input({ label, id, ...props }: InputProps) {
-  const inputId = id || React.useId();
+  const inputId = id;
 
   return (
     <div className={styles.wrapper}>

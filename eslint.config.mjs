@@ -1,5 +1,5 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
+import storybook, { rules } from "eslint-plugin-storybook";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -20,6 +20,9 @@ const eslintConfig = [...compat.extends("next/core-web-vitals", "next/typescript
     "build/**",
     "next-env.d.ts",
   ],
+  // rules: {
+  //   quotes: ["error", "double", { avoidEscape: true }]
+  // },
 }, ...storybook.configs["flat/recommended"]];
 
 export default eslintConfig;
