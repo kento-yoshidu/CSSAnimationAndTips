@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { Input } from "@/components/form/Input";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
           <li><Link href="/posts">posts</Link></li>
           <li><Link href="/users">users</Link></li>
         </ul>
+
+        <Input />
       </main>
     </div>
   );
