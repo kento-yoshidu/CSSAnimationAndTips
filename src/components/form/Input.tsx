@@ -17,7 +17,11 @@ export function Input({ label, id, ...props }: InputProps) {
           {label}
         </Label>
       )}
-      <input id={inputId} className={styles.input} {...props} />
+      <input
+        id={inputId}
+        className={styles.input}
+        {...props}
+      />
     </div>
   );
 }

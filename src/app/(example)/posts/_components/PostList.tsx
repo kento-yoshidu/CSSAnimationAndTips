@@ -1,17 +1,20 @@
+"use client";
+
 import { Post } from "@/app/(example)/apis/fetchPosts.server";
+import { use, useState } from "react";
 
 type Props = {
-  postList: Post[];
+  initialData: Post[];
 }
 
 export default function PostList({
-  postList
+  initialData,
 }: Props) {
-  console.log("list = ", postList);
+
+  const [postList, setPostList] = useState(initialData);
 
   return (
     <ul>
-      <p>hoge</p>
       {postList.map((post) => (
         <li key={post.id}>{post.title}</li>
       ))}

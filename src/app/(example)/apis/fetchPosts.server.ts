@@ -4,7 +4,7 @@ export type Post = {
 };
 
 export default async function fetchPostsServer() {
-  await new Promise((resolve) => setTimeout(resolve, 300));
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   let baseUrl = "https://jsonplaceholder.typicode.com/posts";
 
