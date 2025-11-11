@@ -1,14 +1,13 @@
 import { ReactNode } from "react";
-import SideBar from "./_components/SideBar";
 
-import styles from "./latyout.module.css";
+import Header from "./_components/Header";
 
 export default function ExampleLayout({ children }: { children: ReactNode }) {
   return (
-    <div className={styles.wrapper}>
-      <SideBar />
+    <>
+      <Header />
 
       {children}
-    </div>
+    </>
   );
 };
