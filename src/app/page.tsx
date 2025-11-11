@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { Input } from "@/components/form/Input";
+import { Input } from "@/components/ui/form/Input";
 
 export default function Home() {
   return (
