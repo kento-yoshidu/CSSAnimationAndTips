@@ -2,19 +2,14 @@ import { Suspense, use } from "react";
 import { Post } from "../../apis/fetchPosts.server"
 import PostList from "./PostList";
 import PageWrapper from "../../_components/PageWrapper";
+import Search from "./Search";
 
-type Props = {
-  promiseData: Promise<Post[]>;
-};
-
-export default function Posts({
-  promiseData,
-}: Props) {
-  const initialData = use(promiseData);
-
+export default function Posts() {
   return (
     <PageWrapper pageTitle="投稿一覧" >
-      <PostList initialData={initialData} />
+      <Search />
+
+      <PostList />
     </PageWrapper>
   )
 }
