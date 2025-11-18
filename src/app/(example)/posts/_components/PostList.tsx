@@ -1,23 +1,19 @@
-"use client";
+import fetchPostsServer, { Post } from "@/app/(example)/apis/fetchPosts.server";
+import DisplayTable from "@/components/ui/table/DisplayTable";
 
-import { Post } from "@/app/(example)/apis/fetchPosts.server";
-import { use, useState } from "react";
-
-type Props = {
-  initialData: Post[];
-}
-
-export default function PostList({
-  initialData,
-}: Props) {
-
-  const [postList, setPostList] = useState(initialData);
+export default function PostList() {
+   const columns = [
+    { key: "userId", header: "ユーザーID" },
+    { key: "title", header: "タイトル" },
+    { key: "createdAt", header: "作成日" },
+  ];
 
   return (
-    <ul>
-      {postList.map((post) => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
+    <>
+      <DisplayTable
+        columns={columns}
+        fetchData={fetchPostsServer}
+      />
+    </>
   );
 }

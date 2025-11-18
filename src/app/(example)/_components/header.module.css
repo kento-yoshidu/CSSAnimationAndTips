@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  background-color: #fff;
+  line-height: 64px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}

@@ -1,21 +1,25 @@
 import { Suspense, use } from "react";
-import { Post } from "../../apis/fetchPosts.server"
+import fetchPostsServer, { Post } from "../../apis/fetchPosts.server"
 import PostList from "./PostList";
+import PageWrapper from "../../_components/PageWrapper";
+import Search from "./Search";
+import AsyncTableBody from "@/components/ui/table/DisplayTable";
+import TableLayout from "@/components/ui/table/TableLayout";
+import StaticTable from "@/components/ui/table/StaticTable";
 
-type Props = {
-  promiseData: Promise<Post[]>;
-};
-
-export default function Posts({
-  promiseData,
-}: Props) {
-  const initialData = use(promiseData);
+export default function Posts() {
+  const columns = [
+    { key: "userId", label: "ユーザーID" },
+    { key: "title", label: "タイトル" },
+    { key: "createdAt", label: "作成日" },
+  ];
 
   return (
-    <>
-      <h1>PostList</h1>
-
-      <PostList initialData={initialData} />
-    </>
+    <PageWrapper pageTitle="投稿一覧" >
+      <StaticTable
+        columns={columns}
+        fetchData={fetchPostsServer}
+      />
+    </PageWrapper>
   )
 }
