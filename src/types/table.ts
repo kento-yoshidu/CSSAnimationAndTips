@@ -1,8 +1,5 @@
-// types/table.ts
-export type Column<T = any> = {
+export type Column<T = unknown> = {
   key: keyof T;
   label?: string;
   width?: string | number;
 };
-
-export type RowData = Record<string, any>;

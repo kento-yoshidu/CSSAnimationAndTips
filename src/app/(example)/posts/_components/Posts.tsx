@@ -1,22 +1,17 @@
-import { Suspense, use } from "react";
-import fetchPostsServer, { Post } from "../../apis/fetchPosts.server"
-import PostList from "./PostList";
 import PageWrapper from "../../_components/PageWrapper";
-import Search from "./Search";
-import AsyncTableBody from "@/components/ui/table/DisplayTable";
-import TableLayout from "@/components/ui/table/TableLayout";
-import StaticTable from "@/components/ui/table/StaticTable";
+import DisplayTable from "@/components/table/DisplayTable";
+import fetchPostsServer from "../../apis/fetchPosts.server"
+import type { Column, Post } from "@/types";
 
 export default function Posts() {
-  const columns = [
+  const columns: Column<Post>[] = [
     { key: "userId", label: "ユーザーID" },
     { key: "title", label: "タイトル" },
-    { key: "createdAt", label: "作成日" },
   ];
 
   return (
     <PageWrapper pageTitle="投稿一覧" >
-      <StaticTable
+      <DisplayTable
         columns={columns}
         fetchData={fetchPostsServer}
       />
