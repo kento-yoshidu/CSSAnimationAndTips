@@ -1,14 +1,11 @@
-export type Post = {
-  id: number;
-  title: string;
-};
+import type { PostResponse } from "@/types";
 
-export default async function fetchPostsServer() {
+export default async function fetchPostsServer(): Promise<PostResponse[]> {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
-  let baseUrl = "https://jsonplaceholder.typicode.com/posts";
+  const baseUrl = "https://jsonplaceholder.typicode.com/posts";
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts",
+  const res = await fetch(baseUrl,
     {
       cache: "no-cache",
     }

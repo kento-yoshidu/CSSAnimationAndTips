@@ -1,11 +1,12 @@
-import fetchPostsServer, { Post } from "@/app/(example)/apis/fetchPosts.server";
-import DisplayTable from "@/components/ui/table/DisplayTable";
+import fetchPostsServer from "@/app/(example)/apis/fetchPosts.server";
+import DisplayTable from "@/components_Back/table/DisplayTable";
+
+import type { Column, Post } from "@/types";
 
 export default function PostList() {
-   const columns = [
-    { key: "userId", header: "ユーザーID" },
-    { key: "title", header: "タイトル" },
-    { key: "createdAt", header: "作成日" },
+   const columns: Column<Post>[] = [
+    { key: "userId", label: "ユーザーID" },
+    { key: "title", label: "タイトル" },
   ];
 
   return (

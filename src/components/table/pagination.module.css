@@ -1,0 +1,89 @@
+.paginationContainer {
+  height: 72px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0px -1px 2px 0px #00000040;
+}
+
+.itemsInfo {
+  font-size: 14px;
+  color: #7a7c7f;
+  font-size: 500;
+  justify-self: start;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: center;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  position: relative;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+  position: relative;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #666;
+  font-size: 14px;
+  user-select: none;
+}
+
+.pageButton.active {
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: 700;
+}
