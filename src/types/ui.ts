@@ -1,6 +1,6 @@
-export type Column<T = unknown> = {
+export type TableColumn<T> = {
   key: keyof T;
   label?: string;
-  width?: string | number;
+  width?: string;
   render?: (value: T[keyof T], row: T) => React.ReactNode;
 };

@@ -1,5 +1,5 @@
 import fetchPostsServer from "@/app/(example)/apis/fetchPosts.server";
-import DisplayTable from "@/components/table/DisplayTable";
+import DisplayTable from "@/components_Back/table/DisplayTable";
 
 import type { Column, Post } from "@/types";
 
