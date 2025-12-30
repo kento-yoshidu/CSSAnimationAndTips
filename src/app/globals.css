@@ -1,6 +1,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary-color: #2971e5;
+
+  /* 文字関係 */
+  /* ベースとなる文字色 */
+  --font-color: #212529;
 }
 
 html,
