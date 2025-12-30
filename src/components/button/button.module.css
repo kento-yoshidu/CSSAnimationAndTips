@@ -1,0 +1,51 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  min-width: 80px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.primary-outline {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.attention {
+  background-color: var(--attention-color);
+  color: #ffffff;
+}
+
+.disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.other {
+  background-color: #fff;
+  border: 2px solid, #BFC1C4;
+  box-shadow: 0px 1px 1px 0px #6666664D;
+}
+
+/* 左アイコン用のスタイル */
+.icon {
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+}

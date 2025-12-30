@@ -20,7 +20,8 @@
     "@vitejs/plugin-react": "^5.1.0",
     "next": "^15.5.9",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.69.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.2",
