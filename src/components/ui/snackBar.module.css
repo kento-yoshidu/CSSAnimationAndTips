@@ -1,0 +1,28 @@
+.snackBar {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  height: 62px;
+  padding: 16px;
+  min-width: 400px;
+  background-color: var(--notes-background-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px #80808033;
+  z-index: var(--z-snack-bar);
+
+  .flexWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .title {
+      color: var(--font-color);
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
